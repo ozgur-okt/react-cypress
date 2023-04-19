@@ -1,70 +1,60 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# React Component with Cypress Tests
+This is a simple React component called TestComponent with some basic UI elements and functionality, including a form, a modal, a hidden div, and a new toggle button. It also includes Cypress tests for the component.
 
-## Available Scripts
+## Installation
+To run this project locally, you'll need to have Node.js and npm installed on your system. Then, follow these steps:
 
-In the project directory, you can run:
+Clone the repository: git clone https://github.com/ozgur-okt/react-cypress
 
-### `npm start`
+Change into the project directory:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+`cd react-cypress`
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Install dependencies: 
 
-### `npm test`
+`npm install`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Usage:
 
-### `npm run build`
+To run the app and the tests, use the following command:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+`npm run start`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+This will start the app at http://localhost:3000 and open Cypress, where you can run the tests.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Component Details
 
-### `npm run eject`
+### The TestComponent includes the following UI elements and functionality:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+* A h1 element with the ID "logo" that displays the app name.
+* A p element with the ID "greeting" that displays a welcome message.
+* A button element that displays an alert when clicked.
+* A form element with two input fields (a text input and an email input) and a submit button.
+* A p element with the ID "success" that is hidden by default, but displays a success message when the form is submitted.
+* An a element with the ID "about-link" that links to the About page.
+* A div element with the ID "modal" that is hidden by default, but displays a modal with a "Close" button when the "Open Modal" button is clicked.
+* A button element with the ID "open-modal" that displays the modal when clicked.
+* A div element with the ID "red-box" that displays a red box with dimensions of 100px by 100px.
+* A ul element with three li elements.
+* A div element with the ID "hidden-element" that is hidden by default, but displays a message when the "Show hidden element" button is clicked.
+* A button element with the ID "show-button" that shows the hidden element when clicked.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Cypress Tests
+### The TestComponent includes the following Cypress tests:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+* should display logo and greeting: verifies that the "logo" and "greeting" elements are displayed on the page.
 
-## Learn More
+* should display alert when button is clicked: verifies that an alert is displayed when the button is clicked.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+* should display success message when form is submitted: fills out and submits the form, and verifies that the success message is displayed.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+* should navigate to About page: verifies that clicking on the "About" link navigates to the About page.
 
-### Code Splitting
+* should display modal when open modal button is clicked: verifies that clicking on the "Open Modal" button displays the modal.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+* should close modal when close button is clicked: opens the modal and verifies that clicking on the "Close" button closes the modal.
 
-### Analyzing the Bundle Size
+* should show hidden element when show button is clicked: verifies that clicking on the "Show hidden element" button displays the hidden element.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
